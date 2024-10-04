@@ -16,6 +16,19 @@
             padding: 10px 0;
             text-align: center;
         }
+        nav {
+            background-color: #0056b3;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         h1, h2 {
             color: #333;
         }
@@ -25,6 +38,20 @@
             background-color: white;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
         }
         footer {
             text-align: center;
@@ -43,12 +70,19 @@
     <h1>Introduzione alla Robotica</h1>
 </header>
 
-<section>
-    <h2>Cosa è la Robotica?</h2>
+<nav>
+    <a href="#cosa">Cosa è</a>
+    <a href="#tipi">Tipi di Robot</a>
+    <a href="#applicazioni">Applicazioni</a>
+    <a href="#robots">I Robot</a>
+</nav>
+
+<section id="cosa">
+    <h2>Cos'è la Robotica?</h2>
     <p>La robotica è un campo interdisciplinare che si occupa della progettazione, costruzione, funzionamento e utilizzo di robot. Questi dispositivi possono svolgere una varietà di compiti, dalla produzione industriale all'assistenza domestica.</p>
 </section>
 
-<section>
+<section id="tipi">
     <h2>Tipi di Robot</h2>
     <ul>
         <li><strong>Robot industriali:</strong> Utilizzati in fabbriche per assemblaggio e produzione.</li>
@@ -57,7 +91,7 @@
     </ul>
 </section>
 
-<section>
+<section id="applicazioni">
     <h2>Applicazioni della Robotica</h2>
     <p>La robotica ha numerose applicazioni in vari settori, tra cui:</p>
     <ol>
@@ -67,9 +101,8 @@
     </ol>
 </section>
 
-<footer>
-    <p>&copy; 2024 - La tua guida alla robotica</p>
-</footer>
-
-</body>
-</html>
+<section id="robots">
+    <h2>I Robot</h2>
+    <div class="card-container">
+        <div class="card">
+            <h
