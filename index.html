@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +7,6 @@
     <style>
         body {
             font-family: Serif, sans-serif;
-           
             background-color: #afcfcf;
         }
         header {
@@ -73,6 +70,7 @@
 </header>
 
 <nav>
+    <button id="leggi-pagina">Leggi la pagina</button>
     <a href="#cosa">Cos'è</a>
     <a href="#tipi">Tipi di Robot</a>
     <a href="#applicazioni">Applicazioni</a>
@@ -82,7 +80,7 @@
 <section id="cosa">
     <h2>Cos'è la Robotica?</h2>
     <p>La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici. </p>
-        <p>Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.</p>
+    <p>Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.</p>
 </section>
 
 <section id="tipi">
@@ -110,14 +108,12 @@
     </ol>
 </section>
 
-
-
 <section id="robots">
     <h2>I Robot</h2>
     <div class="card-container">
         <div class="card">
             <h3>ASIMO</h3>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/ASIMO_4.28.11.jpg" alt="400" width="100"> 
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/ASIMO_4.28.11.jpg" alt="ASIMO" width="100"> 
             <p>Progettato da Honda, ASIMO è un robot umanoide capace di camminare, correre e persino interagire con gli esseri umani.</p>
             <a href="https://www.honda.it/cars/world-of-honda/present/news-events/il-nuovissimo-asimo--il-robot-umanoide-sviluppato-da-honda--fa-i.html">
                 <button style="background-color: rgb(151, 221, 218);">Vai al Sito...</button>
@@ -125,7 +121,7 @@
         </div>
         <div class="card">
             <h3>Roomba</h3>
-            <img src="https://files.refurbed.com/ii/irobot-roomba-800-1591766353.jpg?t=fitdesign&h=600&w=800" alt="100" width="100">
+            <img src="https://files.refurbed.com/ii/irobot-roomba-800-1591766353.jpg?t=fitdesign&h=600&w=800" alt="Roomba" width="100">
             <p>Un robot aspirapolvere progettato da iRobot, Roomba autonomamente pulisce il pavimento e si ricarica quando necessario.</p>
             <a href="https://www.irobot.it/roomba/?srsltid=AfmBOorjTvffqHQUlrHvoTxwmJzGS6jXB-SYMEGns30vopf6DqfLYA4Z">
                 <button style="background-color: rgb(151, 221, 218);">Vai al Sito...</button>
@@ -133,7 +129,7 @@
         </div>
         <div class="card">
             <h3>Curiosity</h3>
-            <img src="https://science.nasa.gov/wp-content/uploads/2024/02/curiosity-3d-model.jpg" alt="150" width="150">
+            <img src="https://science.nasa.gov/wp-content/uploads/2024/02/curiosity-3d-model.jpg" alt="Curiosity" width="150">
             <p>Un rover della NASA progettato per esplorare Marte, Curiosity analizza il suolo e invia dati sulla sua composizione.</p>
             <a href="https://science.nasa.gov/mission/msl-curiosity/">
                 <button style="background-color: rgb(151, 221, 218);">Vai al Sito...</button>
@@ -141,9 +137,9 @@
         </div>
         <div class="card">
             <h3>NAO</h3>
-            <img src="https://www.robotlab.com/hubfs/Blue-NAO---Top-1.png" alt="75" width="75">
+            <img src="https://www.robotlab.com/hubfs/Blue-NAO---Top-1.png" alt="NAO" width="75">
             <p>NAO è un robot educativo programmabile, utilizzato in scuole e università per insegnare robotica e programmazione.</p>
-            <a href="https://www.aldebaran.com/it/nao" >
+            <a href="https://www.aldebaran.com/it/nao">
                 <button style="background-color: rgb(151, 221, 218);">Vai al Sito...</button>
             </a>
         </div>
@@ -154,6 +150,16 @@
     <h2>&copy; Robots & Co. 2024 - La tua guida alla robotica</h2>
     <h4>Fondatori: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti</h4>
 </footer>
+
+<script>
+    document.getElementById('leggi-pagina').addEventListener('click', function() {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance();
+        utterance.text = document.body.innerText; 
+        utterance.lang = 'it-IT'; // Imposta la lingua italiana
+        synth.speak(utterance);
+    });
+</script>
 
 </body>
 </html>
