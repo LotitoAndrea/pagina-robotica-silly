@@ -146,57 +146,5 @@
     <h4>Fondatori: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti</h4>
 </footer>
 
-<script>
-    const translations = {
-        title: "Introduction to Robotics",
-        cosaTitle: "What is Robotics?",
-        cosaText: "Robotics is the field that deals with the design and construction of robots, autonomous or semi-autonomous machines capable of performing specific tasks.",
-        cosaText2: "It combines engineering, computer science, and artificial intelligence for applications in various sectors, from manufacturing to medicine.",
-        tipiTitle: "Types of Robots",
-        tipiList: [
-            "Industrial robots are automated machines used in factories to perform tasks such as assembly, production, and material handling.",
-            "Domestic robots, like automatic vacuum cleaners, are devices designed to perform daily tasks at home.",
-            "Exploration robots are devices designed to collect data and perform missions in difficult or inaccessible environments."
-        ],
-        applicazioniTitle: "Applications of Robotics",
-        applicazioniText: "Robotics has applications divided into sectors, such as:",
-        applicazioniList: [
-            "In medicine, robotic surgery uses robots to assist surgeons during operations.",
-            "In industry, process automation through robotics allows for repetitive and complex tasks.",
-            "In education, educational robots are used to teach STEM concepts."
-        ],
-        robotsTitle: "The Robots"
-    };
-
-    document.getElementById('leggi-pagina').addEventListener('click', function() {
-        const synth = window.speechSynthesis;
-        const utterance = new SpeechSynthesisUtterance();
-        utterance.text = document.body.innerText; 
-        utterance.lang = 'it-IT'; 
-        synth.speak(utterance);
-    });
-
-    document.getElementById('translate-page').addEventListener('click', function() {
-        // Traduci il titolo
-        document.getElementById('title').innerText = translations.title;
-
-        // Traduci le sezioni
-        document.getElementById('cosa-title').innerText = translations.cosaTitle;
-        document.getElementById('cosa-text').innerText = translations.cosaText;
-        document.getElementById('cosa-text2').innerText = translations.cosaText2;
-
-        document.getElementById('tipi-title').innerText = translations.tipiTitle;
-        const tipiList = document.getElementById('tipi-list');
-        tipiList.innerHTML = translations.tipiList.map(item => `<li><strong>Robot:</strong> ${item}</li>`).join('');
-
-        document.getElementById('applicazioni-title').innerText = translations.applicazioniTitle;
-        document.getElementById('applicazioni-text').innerText = translations.applicazioniText;
-        const applicazioniList = document.getElementById('applicazioni-list');
-        applicazioniList.innerHTML = translations.applicazioniList.map(item => `<li>${item}</li>`).join('');
-
-        document.getElementById('robots-title').innerText = translations.robotsTitle;
-    });
-</script>
-
 </body>
 </html>
