@@ -71,7 +71,6 @@
 
 <nav>
     <button id="leggi-pagina">Leggi la pagina</button>
-    <button id="translate-page">Traduci in Inglese</button>
     <a href="#cosa">Cos'è</a>
     <a href="#tipi">Tipi di Robot</a>
     <a href="#applicazioni">Applicazioni</a>
@@ -79,12 +78,23 @@
 </nav>
 
 <section id="cosa">
+    <h2>Cos'è la Robotica?</h2>
+    <p>La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici. </p>
+    <p>Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.</p>
     <h2 id="cosa-title">Cos'è la Robotica?</h2>
     <p id="cosa-text">La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici.</p>
     <p id="cosa-text2">Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.</p>
 </section>
 
 <section id="tipi">
+    <h2>Tipi di Robot</h2>
+    <ul>
+        <li><strong>Robot industriali:</strong> 
+            I robot industriali sono macchine automatizzate utilizzate nelle fabbriche per svolgere compiti come assemblaggio, produzione e movimentazione dei materiali. Sono progettati per aumentare l'efficienza, la precisione e la sicurezza, riducendo al contempo i costi e il tempo di produzione.</li>
+        <li><strong>Robot domestici:</strong> 
+            I robot domestici, come gli aspirapolvere automatici, sono dispositivi progettati per svolgere compiti quotidiani in casa, come la pulizia dei pavimenti. Semplificano le faccende domestiche, permettendo di risparmiare tempo e fatica, e spesso possono essere programmati per lavorare in autonomia.</li>
+        <li><strong>Robot esploratori:</strong> 
+            I robot esploratori sono dispositivi progettati per raccogliere dati e svolgere missioni in ambienti difficili o inaccessibili, come nello spazio o negli oceani. Sono utilizzati per esplorazioni scientifiche, permettendo di studiare luoghi pericolosi senza rischiare la vita degli esseri umani.</li>
     <h2 id="tipi-title">Tipi di Robot</h2>
     <ul id="tipi-list">
         <li><strong>Robot industriali:</strong> I robot industriali sono macchine automatizzate utilizzate nelle fabbriche per svolgere compiti come assemblaggio, produzione e movimentazione dei materiali.</li>
@@ -94,6 +104,15 @@
 </section>
 
 <section id="applicazioni">
+    <h2>Applicazioni della Robotica</h2>
+    <p>La robotica ha delle applicazioni divise in settori, come:</p>
+    <ol>
+        <li><strong> Medicina: </strong>
+            Nella medicina, la chirurgia robotica utilizza robot per assistere i chirurghi durante gli interventi. Questo approccio offre maggiore precisione, minori incisioni e un recupero più rapido per i pazienti, migliorando i risultati complessivi delle operazioni.</li>
+        <li><strong> Industria: </strong>
+            Nell'industria, l'automazione dei processi tramite robotica consente di svolgere compiti ripetitivi e complessi in modo più rapido ed efficiente. I robot migliorano la produttività, riducono gli errori e ottimizzano l'uso delle risorse, rendendo i processi produttivi più competitivi.</li>
+        <li><strong>Educazione: </strong>
+            Nell'educazione, i robot educativi vengono utilizzati per insegnare concetti STEM (scienza, tecnologia, ingegneria e matematica). Questi robot rendono l'apprendimento interattivo e coinvolgente, aiutando gli studenti a sviluppare competenze pratiche e a stimolare la curiosità per la tecnologia.</li>
     <h2 id="applicazioni-title">Applicazioni della Robotica</h2>
     <p id="applicazioni-text">La robotica ha delle applicazioni divise in settori, come:</p>
     <ol id="applicazioni-list">
@@ -104,6 +123,7 @@
 </section>
 
 <section id="robots">
+    <h2>I Robot</h2>
     <h2 id="robots-title">I Robot</h2>
     <div class="card-container">
         <div class="card">
@@ -117,6 +137,7 @@
         <div class="card">
             <h3>Roomba</h3>
             <img src="https://files.refurbed.com/ii/irobot-roomba-800-1591766353.jpg?t=fitdesign&h=600&w=800" alt="Roomba" width="100">
+            <p>Un robot aspirapolvere progettato da iRobot, Roomba autonomamente pulisce il pavimento e si ricarica quando necessario.</p>
             <p>Un robot aspirapolvere progettato da iRobot, Roomba autonomamente pulisce il pavimento.</p>
             <a href="https://www.irobot.it/roomba/?srsltid=AfmBOorjTvffqHQUlrHvoTxwmJzGS6jXB-SYMEGns30vopf6DqfLYA4Z">
                 <button style="background-color: rgb(151, 221, 218);">Vai al Sito...</button>
@@ -143,8 +164,18 @@
 
 <footer>
     <h2>&copy; Robots & Co. 2024 - La tua guida alla robotica</h2>
-    <h4>Fondatori: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti</h4>
+    <h4>Fondatori: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti - Jack Nwankwo</h4>
 </footer>
 
+<script>
+    document.getElementById('leggi-pagina').addEventListener('click', function() {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance();
+        utterance.text = document.body.innerText; 
+        utterance.lang = 'it-IT'; // Imposta la lingua italiana
+        utterance.lang = 'it-IT'; 
+        synth.speak(utterance);
+    });
+</script>
+
 </body>
-</html>
