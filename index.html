@@ -79,23 +79,12 @@
 </nav>
 
 <section id="cosa">
-    <h2>Cos'è la Robotica?</h2>
-    <p>La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici. </p>
-    <p>Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.</p>
     <h2 id="cosa-title">Cos'è la Robotica?</h2>
     <p id="cosa-text">La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici.</p>
     <p id="cosa-text2">Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.</p>
 </section>
 
 <section id="tipi">
-    <h2>Tipi di Robot</h2>
-    <ul>
-        <li><strong>Robot industriali:</strong> 
-            I robot industriali sono macchine automatizzate utilizzate nelle fabbriche per svolgere compiti come assemblaggio, produzione e movimentazione dei materiali. Sono progettati per aumentare l'efficienza, la precisione e la sicurezza, riducendo al contempo i costi e il tempo di produzione.</li>
-        <li><strong>Robot domestici:</strong> 
-            I robot domestici, come gli aspirapolvere automatici, sono dispositivi progettati per svolgere compiti quotidiani in casa, come la pulizia dei pavimenti. Semplificano le faccende domestiche, permettendo di risparmiare tempo e fatica, e spesso possono essere programmati per lavorare in autonomia.</li>
-        <li><strong>Robot esploratori:</strong> 
-            I robot esploratori sono dispositivi progettati per raccogliere dati e svolgere missioni in ambienti difficili o inaccessibili, come nello spazio o negli oceani. Sono utilizzati per esplorazioni scientifiche, permettendo di studiare luoghi pericolosi senza rischiare la vita degli esseri umani.</li>
     <h2 id="tipi-title">Tipi di Robot</h2>
     <ul id="tipi-list">
         <li><strong>Robot industriali:</strong> I robot industriali sono macchine automatizzate utilizzate nelle fabbriche per svolgere compiti come assemblaggio, produzione e movimentazione dei materiali.</li>
@@ -105,15 +94,6 @@
 </section>
 
 <section id="applicazioni">
-    <h2>Applicazioni della Robotica</h2>
-    <p>La robotica ha delle applicazioni divise in settori, come:</p>
-    <ol>
-        <li><strong> Medicina: </strong>
-            Nella medicina, la chirurgia robotica utilizza robot per assistere i chirurghi durante gli interventi. Questo approccio offre maggiore precisione, minori incisioni e un recupero più rapido per i pazienti, migliorando i risultati complessivi delle operazioni.</li>
-        <li><strong> Industria: </strong>
-            Nell'industria, l'automazione dei processi tramite robotica consente di svolgere compiti ripetitivi e complessi in modo più rapido ed efficiente. I robot migliorano la produttività, riducono gli errori e ottimizzano l'uso delle risorse, rendendo i processi produttivi più competitivi.</li>
-        <li><strong>Educazione: </strong>
-            Nell'educazione, i robot educativi vengono utilizzati per insegnare concetti STEM (scienza, tecnologia, ingegneria e matematica). Questi robot rendono l'apprendimento interattivo e coinvolgente, aiutando gli studenti a sviluppare competenze pratiche e a stimolare la curiosità per la tecnologia.</li>
     <h2 id="applicazioni-title">Applicazioni della Robotica</h2>
     <p id="applicazioni-text">La robotica ha delle applicazioni divise in settori, come:</p>
     <ol id="applicazioni-list">
@@ -173,130 +153,79 @@
         const utterance = new SpeechSynthesisUtterance();
         utterance.text = document.body.innerText; 
         utterance.lang = 'it-IT'; // Imposta la lingua italiana
-        utterance.lang = 'en-EN'; // imposta la lingua inglese 
         synth.speak(utterance);
     });
-    const traduzioni = {
-        "Introduzione alla Robotica":"Introduction to Robotics",
-        "Leggi la pagina":"Read the page",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
-        "":"",
 
+    const traduzioni = {
+        "Introduzione alla Robotica": "Introduction to Robotics",
+        "Leggi la pagina": "Read the page",
+        "Cos'è": "What is Robotics?",
+        "Tipi di Robot": "Types of Robots",
+        "Applicazioni della Robotica": "Applications of Robotics",
+        "Robot industriali": "Industrial Robots",
+        "Robot domestici": "Domestic Robots",
+        "Robot esploratori": "Exploratory Robots",
+        "Medicina": "Medicine",
+        "Industria": "Industry",
+        "Educazione": "Education",
+        "Progettato da Honda, ASIMO è un robot umanoide capace di camminare, correre e persino interagire con gli esseri umani.": "Designed by Honda, ASIMO is a humanoid robot capable of walking, running, and even interacting with humans.",
+        "Un robot aspirapolvere progettato da iRobot, Roomba autonomamente pulisce il pavimento.": "A vacuum robot designed by iRobot, Roomba autonomously cleans the floor.",
+        "Un rover della NASA progettato per esplorare Marte, Curiosity analizza il suolo e invia dati sulla sua composizione.": "A NASA rover designed to explore Mars, Curiosity analyzes soil and sends data about its composition.",
+        "NAO è un robot educativo programmabile, utilizzato in scuole e università per insegnare robotica e programmazione.": "NAO is a programmable educational robot, used in schools and universities to teach robotics and programming.",
+        "Vai al Sito...": "Go to Site...",
+        "&copy; Robots & Co. 2024 - La tua guida alla robotica": "&copy; Robots & Co. 2024 - Your guide to robotics",
+        "Fondatori: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti - Jack Nwankwo": "Founders: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti - Jack Nwankwo"
     };
 
     function traduci() {
-        document.getElementById("title").innerText = traduzioni[document.getElementById("title").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("leggi-pagina").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
-        document.getElementById("leggi-pagina").innerText = traduzioni[document.getElementById("descrizione").innerText];
+        document.getElementById('title').innerText = traduzioni['Introduzione alla Robotica'];
+        document.getElementById('leggi-pagina').innerText = traduzioni['Leggi la pagina'];
+        document.querySelector('#cosa h2').innerText = traduzioni['Cos\'è'];
+        document.querySelector('#tipi h2').innerText = traduzioni['Tipi di Robot'];
+        document.querySelector('#applicazioni h2').innerText = traduzioni['Applicazioni della Robotica'];
+        document.querySelectorAll('#tipi ul li strong')[0].innerText = traduzioni['Robot industriali'];
+        document.querySelectorAll('#tipi ul li strong')[1].innerText = traduzioni['Robot domestici'];
+        document.querySelectorAll('#tipi ul li strong')[2].innerText = traduzioni['Robot esploratori'];
+        document.querySelectorAll('#applicazioni ol li strong')[0].innerText = traduzioni['Medicina'];
+        document.querySelectorAll('#applicazioni ol li strong')[1].innerText = traduzioni['Industria'];
+        document.querySelectorAll('#applicazioni ol li strong')[2].innerText = traduzioni['Educazione'];
+        document.querySelector('#robots-title').innerText = traduzioni['I Robot'];
+        document.querySelectorAll('#cosa p')[0].innerText = traduzioniParagrafi["La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici."];
+        document.querySelectorAll('#cosa p')[1].innerText = traduzioniParagrafi["Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina."];
+        document.querySelectorAll('#tipi ul li')[0].innerText = traduzioniParagrafi["I robot industriali sono macchine automatizzate utilizzate nelle fabbriche per svolgere compiti come assemblaggio, produzione e movimentazione dei materiali."];
+        document.querySelectorAll('#tipi ul li')[1].innerText = traduzioniParagrafi["I robot domestici, come gli aspirapolvere automatici, sono dispositivi progettati per svolgere compiti quotidiani in casa, come la pulizia dei pavimenti."];
+        document.querySelectorAll('#tipi ul li')[2].innerText = traduzioniParagrafi["I robot esploratori sono dispositivi progettati per raccogliere dati e svolgere missioni in ambienti difficili o inaccessibili, come nello spazio o negli oceani."];
+        document.querySelector('#applicazioni p').innerText = traduzioniParagrafi["La robotica ha delle applicazioni divise in settori, come:"];
+        document.querySelectorAll('#applicazioni ol li')[0].innerText = traduzioniParagrafi["Nella medicina, la chirurgia robotica utilizza robot per assistere i chirurghi durante gli interventi."];
+        document.querySelectorAll('#applicazioni ol li')[1].innerText = traduzioniParagrafi["Nell'industria, l'automazione dei processi tramite robotica consente di svolgere compiti ripetitivi e complessi."];
+        document.querySelectorAll('#applicazioni ol li')[2].innerText = traduzioniParagrafi["Nell'educazione, i robot educativi vengono utilizzati per insegnare concetti STEM."];
 
+        const traduzioniParagrafi = {
+    "La robotica è il campo che si occupa della progettazione e costruzione di robot, macchine autonome o semiautonomiche in grado di eseguire compiti specifici.": "Robotics is the field that deals with the design and construction of robots, autonomous or semi-autonomous machines capable of performing specific tasks.",
+    "Combina ingegneria, informatica e intelligenza artificiale per applicazioni in vari settori, dalla produzione alla medicina.": "It combines engineering, computer science, and artificial intelligence for applications in various fields, from manufacturing to medicine.",
+    "I robot industriali sono macchine automatizzate utilizzate nelle fabbriche per svolgere compiti come assemblaggio, produzione e movimentazione dei materiali.": "Industrial robots are automated machines used in factories to perform tasks such as assembly, production, and material handling.",
+    "I robot domestici, come gli aspirapolvere automatici, sono dispositivi progettati per svolgere compiti quotidiani in casa, come la pulizia dei pavimenti.": "Domestic robots, like automatic vacuum cleaners, are devices designed to perform everyday tasks at home, such as cleaning floors.",
+    "I robot esploratori sono dispositivi progettati per raccogliere dati e svolgere missioni in ambienti difficili o inaccessibili, come nello spazio o negli oceani.": "Exploratory robots are devices designed to collect data and perform missions in challenging or inaccessible environments, such as space or oceans.",
+    "La robotica ha delle applicazioni divise in settori, come:": "Robotics has applications divided into sectors, such as:",
+    "Nella medicina, la chirurgia robotica utilizza robot per assistere i chirurghi durante gli interventi.": "In medicine, robotic surgery uses robots to assist surgeons during procedures.",
+    "Nell'industria, l'automazione dei processi tramite robotica consente di svolgere compiti ripetitivi e complessi.": "In industry, process automation through robotics enables repetitive and complex tasks.",
+    "Nell'educazione, i robot educativi vengono utilizzati per insegnare concetti STEM.": "In education, educational robots are used to teach STEM concepts."
+};
+
+        const cards = document.querySelectorAll('.card');
+        cards[0].querySelector('p').innerText = traduzioni['Progettato da Honda, ASIMO è un robot umanoide capace di camminare, correre e persino interagire con gli esseri umani.'];
+        cards[1].querySelector('p').innerText = traduzioni['Un robot aspirapolvere progettato da iRobot, Roomba autonomamente pulisce il pavimento.'];
+        cards[2].querySelector('p').innerText = traduzioni['Un rover della NASA progettato per esplorare Marte, Curiosity analizza il suolo e invia dati sulla sua composizione.'];
+        cards[3].querySelector('p').innerText = traduzioni['NAO è un robot educativo programmabile, utilizzato in scuole e università per insegnare robotica e programmazione.'];
+
+        const buttons = document.querySelectorAll('.card a button');
+        buttons[0].innerText = traduzioni['Vai al Sito...'];
+        buttons[1].innerText = traduzioni['Vai al Sito...'];
+        buttons[2].innerText = traduzioni['Vai al Sito...'];
+        buttons[3].innerText = traduzioni['Vai al Sito...'];
+
+        document.querySelector('footer h2').innerText = traduzioni['&copy; Robots & Co. 2024 - La tua guida alla robotica'];
+        document.querySelector('footer h4').innerText = traduzioni['Fondatori: Lotito Andrea - Hostina Cristian Daniel - Mirabelli Gabriel - Riccardo Gianotti - Jack Nwankwo'];
     };
 </script>
 
